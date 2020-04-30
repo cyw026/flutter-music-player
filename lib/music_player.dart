@@ -9,3 +9,4 @@ export 'src/channel_ui.dart';
 export 'src/channel_service.dart';
 
 export 'src/utils/progress_track_containter.dart';
+export 'src/internal/ext_copy.dart';

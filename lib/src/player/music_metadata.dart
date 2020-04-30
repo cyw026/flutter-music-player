@@ -24,6 +24,16 @@ class MusicMetadata {
   })  : assert(mediaId != null),
         assert(duration != null);
 
+  bool isNotEmpty() {
+    return title != null && title.isNotEmpty;
+  }
+
+  @override
+  bool operator ==(Object other) => identical(this, other) || other is MusicMetadata && mediaId == other.mediaId;
+
+  @override
+  int get hashCode => mediaId.hashCode;
+
   @override
   String toString() {
     return 'MusicMetadata{mediaId: $mediaId, title: $title, subtitle: $subtitle}';
